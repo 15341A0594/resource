@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  
+  background-image: url("index14.jpg");
+
+  height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+select {
+  width: 25%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+input 
+{
+  width:25%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+</style>
+</style>
+</head>
+<body>
+<div class=bg align="center">
+<form action="request.php" method="POST" class="container">
+<br>
+<h2>Client Request</h2>
+<br>
+<br>
+<b>Client name</b><br>
+  <select id="country" name="client" required>
+  <option value="au">Nokia</option>
+  <option value="ca">Eriscon</option>
+  <option value="usa">Alcetal Lucent</option>
+  <option value="NEC">NCE</option>
+  <option value="others">Others</option>
+  </select><br>
+  <br>
+  <b> No of Resource</b><br>
+  <input type=number name=num required >
+<br>
+<br>
+<div id="class" style=width:35% >
+<input type=submit value= submit>
+</div>
+
+</form>
+</div>
+</body>
+</html>

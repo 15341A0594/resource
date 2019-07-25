@@ -1,0 +1,53 @@
+
+
+<html>
+    <body>
+
+        <?php
+        $con=  mysqli_connect("localhost", "root", "", "resource");
+        if(!$con)
+       {
+           die('not connected');
+       }
+            $con=  mysqli_query($con, "select * from record");
+       ?>
+        <div>
+            <td>Employee Details</td>
+         <table border="1">
+         <tr>
+            <th> Candidate Name</th>
+                    <th>Experience</th>
+                    <th>Skills</th>
+                     <th>Mobile No</th>
+                    <th>Email Id</th>
+                    <th>Client</th>
+                    <th>Resume</th>
+                  
+
+            </tr>
+
+        <?php
+
+             while($row=  mysqli_fetch_array($con))
+
+             {
+                 ?>
+            <tr>
+                <td><?php echo $row['name']; ?></td>
+                <td><?php echo $row['expr']; ?></td>
+                <td><?php echo $row['skills']; ?></td>
+                <td><?php echo $row['tel'] ;?></td>
+                <td><?php echo $row['email'] ;?></td>
+                <td><?php echo $row['client'] ;?></td>
+                <td><?php echo $row['file'] ;?></td>
+               
+            </tr>
+        <?php
+             }
+             ?>
+             </table>
+            </div>
+    </body>
+</html>
+
+
